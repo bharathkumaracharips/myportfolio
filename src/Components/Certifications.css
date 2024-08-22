@@ -1,0 +1,42 @@
+#Certifications {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.certification-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certification-grid h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.certification-grid a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.certification-grid a:hover {
+    text-decoration: underline;
+}
+
+.certification-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.certification-item .logo {
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto;
+}
+
+.certification-item .certificate {
+    max-width: 400px; /* Adjust the size as needed */
+    height: auto;
+}
