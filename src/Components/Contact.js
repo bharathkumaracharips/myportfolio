@@ -1,13 +1,12 @@
 import React, { useRef , useState} from 'react';
 import emailjs from '@emailjs/browser';
 import "./Contact.css"
+import { FaEnvelope } from 'react-icons/fa';
 export const Contact = () => {
   const form = useRef();
   const [message, setMessage] = useState('');
-  
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm('service_o06i9of', 'template_043yoph', form.current, {
         publicKey: 'HaQYq3fmat6ts9EFh',
@@ -31,6 +30,9 @@ export const Contact = () => {
         <input type="email" name="user_email" />
         <label>Message</label>
         <textarea name="message" />
+        <div style={{ fontSize: '40px' }}>
+        <FaEnvelope title="Email" />
+        </div>
         <input type="submit" value="Send" />
       </form>
       {message && (
