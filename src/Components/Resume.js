@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 const Resume = () => {
   return (
     <section id="resume">
-        <Link to="/">Back to Home</Link>
       <h1>My Resume</h1>
       <a href="/PSBharathKumarAchariResume.pdf" download>
         Download my resume

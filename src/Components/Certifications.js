@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Certifications.css";
 
 const Certifications = () => {
     return (
         <section id='Certifications'>
-            <Link to="/">Back</Link>
             <div className="certification-grid">
                 <h1>My certifications</h1>
 

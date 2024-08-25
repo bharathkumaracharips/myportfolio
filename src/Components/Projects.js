@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 // Sample projects data with categories
 const projectsData = [
@@ -40,8 +39,6 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <Link to="/">Back</Link>
-
       <div className="category-filter">
         {categories.map((category, index) => (
           <button
