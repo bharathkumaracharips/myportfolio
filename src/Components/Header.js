@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <header>
-      <img src="/profile.jpg" alt="Profile Picture" className="profile-image" />
+      <img src="/profile.jpg" alt="" className="profile-image" ></img>
         <div className="indicator">
           {activeSection ? `cd /${activeSection}` : 'Welcome'}
         </div>
