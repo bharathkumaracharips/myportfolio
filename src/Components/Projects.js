@@ -70,12 +70,12 @@ const Projects = () => {
             {project.photoSrcs.length > 0 && (
               <div className="project-photos">
                 {project.photoSrcs.map((photoSrc, photoIndex) => (
-                  <img
-                    key={photoIndex}
-                    src={photoSrc}
-                    alt={`Project ${index + 1} Photo ${photoIndex + 1}`}
-                    className="project-photo"
-                  />
+                 <img 
+                 key={photoIndex}
+                 src={photoSrc}
+                 alt="" 
+                 className="project-photo"
+               />
                 ))}
               </div>
             )}
