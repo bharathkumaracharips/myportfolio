@@ -1,0 +1,62 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Skills Section */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.Programm_icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon_with_progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.icon_with_progress svg {
+    font-size: 40px;
+    margin-right: 20px;
+    color: #007bff;
+}
+
+.progress_bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .icon_with_progress {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .icon_with_progress {
+        width: 50%;
+    }
+}

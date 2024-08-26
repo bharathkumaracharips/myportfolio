@@ -6,8 +6,10 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Resume from './Components/Resume';
+import Skills from "./Components/Skills"
 import Internship from './Components/Internship';
 import Certifications from './Components/Certifications';
+import Footer from './Components/Footer';
 
 const App = () => {
 
@@ -66,29 +68,30 @@ const App = () => {
         <Header />
         <main>
           <section id="intro" className="intro">
-            <h1>LOOKING FOR A BLOCKCHAIN DEVELOPER AND ETHICAL HACKER</h1>
-            <p>You are at the right place</p>
-            <h1>I am P S BHARATH KUMAR ACHARI looking for an ETHICAL HACKER role and Blockchain developer</h1>
-            <h1>Please click the button below to know more details</h1>
+            <h1>LOOKING FOR A BLOCKCHAIN DEVELOPER</h1>
+            <h1>I am P S BHARATH KUMAR ACHARI Block chain developer </h1>
           </section>
           <section id="about">
             <About />
           </section>
+          <section id="skills"><Skills/>
+          </section>
           <section id="projects">
             <Projects />
           </section>
-          <section id="contact">
-            <Contact />
-          </section>
           <section id="resume">
             <Resume />
-          </section>
-          <section id="internship">
+            </section>
+            <section id="internship">
             <Internship />
           </section>
           <section id="certifications">
             <Certifications />
+            </section>
+          <section id="contact">
+            <Contact />
           </section>
+          <Footer />
         </main>
       </div>
     </Router>

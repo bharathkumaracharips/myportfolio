@@ -1,0 +1,51 @@
+.resume-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  .resume-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .pdf-fullscreen-container {
+    width: 200vw; /* Full viewport width */
+    height: 200vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pdf-fullscreen-viewer {
+    width: 200%;
+    height: 200%;
+    object-fit: contain; /* Maintains aspect ratio and fits the PDF within the container */
+    border: none;
+  }
+  
+  .download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .download-icon {
+    margin-right: 10px;
+    font-size: 1.5em;
+  }

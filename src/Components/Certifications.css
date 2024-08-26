@@ -9,11 +9,13 @@
     gap: 20px;
 }
 
+/* Ensure the title is responsive */
 .certification-grid h1 {
     font-size: 1.5rem;
     margin: 10px 0;
 }
 
+/* Style links with responsive font size */
 .certification-grid a {
     font-size: 1rem;
     color: #007bff;
@@ -21,22 +23,63 @@
     margin-bottom: 20px;
 }
 
+/* Underline links on hover */
 .certification-grid a:hover {
     text-decoration: underline;
 }
 
+/* Flexbox for certification items */
 .certification-item {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
+/* Responsive logo styling */
 .certification-item .logo {
     max-width: 100px; /* Adjust the size as needed */
     height: auto;
 }
 
+/* Responsive certificate styling */
 .certification-item .certificate {
     max-width: 400px; /* Adjust the size as needed */
     height: auto;
+}
+
+/* Responsive styling for tablets and smaller screens */
+@media (max-width: 768px) {
+    .certification-item {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+        gap: 10px; /* Adjust gap between items */
+    }
+
+    .certification-item .logo {
+        max-width: 80px; /* Smaller size for smaller screens */
+    }
+
+    .certification-item .certificate {
+        max-width: 100%; /* Ensure certificate takes full width on smaller screens */
+    }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+    .certification-grid h1 {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
+
+    .certification-grid a {
+        font-size: 0.9rem; /* Adjust font size for links */
+    }
+
+    .certification-item .logo {
+        max-width: 60px; /* Further reduce size for mobile screens */
+    }
+
+    .certification-item .certificate {
+        max-width: 100%; /* Ensure certificate takes full width on mobile screens */
+    }
 }

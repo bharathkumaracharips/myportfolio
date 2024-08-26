@@ -1,20 +1,23 @@
 import React from 'react';
+import { LiaFileDownloadSolid } from "react-icons/lia";
+import './Resume.css'; // Import the CSS file for styling
+
 const Resume = () => {
   return (
-    <section id="resume">
-      <h1>My Resume</h1>
-      <a href="/PSBharathKumarAchariResume.pdf" download>
-        Download my resume
+    <section id="resume" className="resume-section">
+      <h1 className="resume-title">My Resume</h1>
+      <div className="pdf-container">
+        <iframe 
+          src="/PSBharathKumarAchariResume.pdf" 
+          title="Resume PDF" 
+          className="pdf-viewer"
+          frameBorder="0"
+        />
+      </div>
+      <a href="/PSBharathKumarAchariResume.pdf" download className="download-button">
+        <LiaFileDownloadSolid className="download-icon" />
+        Download
       </a>
-      <iframe
-        src="/PSBharathKumarAchariResume.pdf"
-        width="100%"
-        height="600px"
-        style={{ border: 'none' }}
-        title="Resume"
-      >
-        This browser does not support PDFs. Please download the PDF to view it: <a href="/PSBharathKumarAchariResume.pdf">Download PDF</a>.
-      </iframe>
     </section>
   );
 };
