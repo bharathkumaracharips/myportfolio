@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header';
 import About from './Components/About';
@@ -14,16 +14,17 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
-      const scrollPos = window.scrollY + window.innerHeight;
+      const scrollPos = window.scrollY + window.innerHeight / 2; // Adjust for middle of viewport
       let currentSection = '';
 
       sections.forEach((section) => {
-        if (scrollPos > section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
           currentSection = section.id;
         }
       });
 
       updateSliderPosition(currentSection);
+      updateActiveNavLink(currentSection);
     };
 
     const updateSliderPosition = (currentSection) => {
@@ -39,6 +40,17 @@ const App = () => {
       });
 
       document.getElementById('slider-inner').style.width = `${sectionPercent}%`;
+    };
+
+    const updateActiveNavLink = (currentSection) => {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href && href.substring(1) === currentSection) {
+          link.classList.add('active');
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
