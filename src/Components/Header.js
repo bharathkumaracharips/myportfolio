@@ -21,6 +21,7 @@ const Header = () => {
         <div className="indicator">
           {activeSection ? `cd /${activeSection}` : 'Ps Bharath Kumar Achari'}
         </div>
+        <div className='navcontainer'>
         <nav>
           <ul>
             <li>
@@ -65,6 +66,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        </div>
       </header>
       <div className="slider">
         <div id="slider-inner" className="slider-inner"></div>
@@ -74,3 +76,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

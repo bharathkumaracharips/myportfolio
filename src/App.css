@@ -70,6 +70,64 @@ nav a.active {
   color: #007bff;
 }
 
+/* bprder and floating css for nav */
+
+.navcontainer {
+  position: relative;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensure content stays within the border */
+}
+
+.navcontainer::before {
+  content: '';
+  position: absolute;
+  top: -5px; /* Adjust the size of the border effect */
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: radial-gradient(75% 181.15942028985506% at 50% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: -1; /* Place the border behind the content */
+  border-radius: 15px; /* Match the container's border radius */
+}
+
+.navcontainer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navcontainer nav ul li {
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navcontainer nav ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.navcontainer nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navcontainer nav ul li a:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+
 .slider {
   position: fixed;
   bottom: 0;

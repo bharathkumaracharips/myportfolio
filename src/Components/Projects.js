@@ -39,18 +39,22 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <div className="category-filter">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            className={`category-button ${selectedCategory === category ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
+      {/* Floating filter section */}
+      <div className="category-filter-container">
+        <div className="category-filter">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              className={`category-button ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
 
+      {/* Project list */}
       <div className="project-list">
         {filteredProjects.map((project, index) => (
           <div key={index} className="project">
@@ -67,12 +71,12 @@ const Projects = () => {
             {project.photoSrcs.length > 0 && (
               <div className="project-photos">
                 {project.photoSrcs.map((photoSrc, photoIndex) => (
-                 <img 
-                 key={photoIndex}
-                 src={photoSrc}
-                 alt="" 
-                 className="project-photo"
-               />
+                  <img 
+                    key={photoIndex}
+                    src={photoSrc}
+                    alt=""
+                    className="project-photo"
+                  />
                 ))}
               </div>
             )}
